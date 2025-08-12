@@ -1,0 +1,32 @@
+body{
+  background-color: black;
+}
+
+.list-element{
+  color: greenyellow;
+}
+
+.navb{
+  color: orange;
+  display: flexbox;
+  justify-items: center;
+}
+
+.navb.hover{
+  color:red;
+}
+
+.main-nav{
+  display: flexbox;
+  justify-items: flex-end;
+}
+
+.link{
+  padding-right: 100px;
+}
+
+.tt{
+  font-size: 50px;
+  color: blue;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
