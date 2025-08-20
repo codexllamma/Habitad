@@ -1,12 +1,35 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <link rel="stylesheet" href="index.css">
-  </head>
-  <body>
-    <p class="tt">Stop Thinking. Start Planning</p>
-    <p>Drop your goal below and we will get right to it</p>
-    
-    <input type="text">
-  </body>
-</html>
+<body>
+  <p class="tt">Stop Thinking. Start Planning</p>
+  <p>Drop your goal below:</p>
+
+  <input id="goalInput" type="text" placeholder="Enter your goal">
+  <button onclick="addGoal()">Add Goal</button>
+
+  <div id="progress-container">
+    <progress id="progressBar" value="0" max="100"></progress>
+  </div>
+
+  <ul id="goalList"></ul>
+
+  <script>
+    let completed = 0, total = 0;
+
+    function addGoal() {
+      const goal = document.getElementById("goalInput").value;
+      if (!goal) return;
+
+      total++;
+      let li = document.createElement("li");
+      li.innerHTML = `<input type="checkbox" onchange="updateProgress(this)"> ${goal}`;
+      document.getElementById("goalList").appendChild(li);
+      updateProgress();
+    }
+
+    function updateProgress(checkbox) {
+      if (checkbox && checkbox.checked) completed++;
+      if (checkbox && !checkbox.checked) completed--;
+      let percent = total ? (completed / total) * 100 : 0;
+      document.getElementById("progressBar").value = percent;
+    }
+  </script>
+</body>

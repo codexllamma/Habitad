@@ -1,32 +1,54 @@
-body{
-  background-color: black;
+body {
+  background: #f5f7fa; /* calming light background */
+  font-family: Arial, sans-serif;
+  margin: 0;
+  color: #333;
 }
 
-.list-element{
-  color: greenyellow;
+.hero {
+  text-align: center;
+  padding: 80px 20px;
+  background: linear-gradient(135deg, #a3c9f9, #d5f0e6);
+  border-radius: 20px;
+  margin: 20px;
 }
 
-.navb{
-  color: orange;
-  display: flexbox;
-  justify-items: center;
+.hero h1 {
+  font-size: 60px;
+  color: #2d3436;
 }
 
-.navb.hover{
-  color:red;
+.hero p {
+  font-size: 20px;
+  margin: 10px 0 30px;
 }
 
-.main-nav{
-  display: flexbox;
-  justify-items: flex-end;
+.hero button {
+  margin: 10px;
+  padding: 15px 30px;
+  border: none;
+  border-radius: 12px;
+  font-size: 18px;
+  background: #4CAF50;
+  color: white;
+  cursor: pointer;
 }
 
-.link{
-  padding-right: 100px;
+.hero button:hover {
+  background: #45a049;
 }
 
-.tt{
-  font-size: 50px;
-  color: blue;
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+#features {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin: 40px;
+}
+
+.feature-card {
+  background: white;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  font-size: 18px;
 }

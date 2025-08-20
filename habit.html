@@ -1,23 +1,41 @@
-<!DOCTYPE html>
-<html>
-  <head>
-      <link rel="stylesheet" href="index.css">
-      <title> Habitad </title>
-  </head>
-  <body>
-        <p class="tt"> A person is the sum of their habits</p>
-        <button>
-            Start Tracking
-        </button>
-        
-        <input type="text" placeholder="Enter the habit">
-        <input type="number" placeholder="Set a minimum day streak goal for this habit"> 
+<body>
+  <p class="tt">A person is the sum of their habits</p>
 
-        <ul>
-          <li class="list-element">Learn Guitar</li>
-          <li class="list-element">Hit the Gym</li>
-          <li class="list-element">Sleep at 11</li>  
-        </ul>
-  </body>
-</html>
+  <input id="habitInput" type="text" placeholder="Enter the habit">
+  <input id="streakInput" type="number" placeholder="Set streak goal (days)">
+  <button onclick="addHabit()">Add Habit</button>
 
+  <ul id="habitList"></ul>
+
+  <script>
+    function addHabit() {
+      const name = document.getElementById("habitInput").value;
+      if (!name) return;
+
+      let li = document.createElement("li");
+      li.innerHTML = `
+        <span>${name}</span> 
+        <button onclick="markDone(this)">✅</button> 
+        <button onclick="markSkipped(this)">❌</button>
+        <button onclick="markPartial(this)">⏳</button>
+        <span class="streak">Streak: 0</span>
+      `;
+      document.getElementById("habitList").appendChild(li);
+    }
+
+    function markDone(btn) {
+      let streak = btn.parentElement.querySelector(".streak");
+      let count = parseInt(streak.innerText.split(": ")[1]) + 1;
+      streak.innerText = "Streak: " + count;
+    }
+
+    function markSkipped(btn) {
+      let reason = prompt("Why did you skip?");
+      alert("Reflection saved: " + reason);
+    }
+
+    function markPartial(btn) {
+      alert("Great effort! You did part of it. Keep going tomorrow.");
+    }
+  </script>
+</body>

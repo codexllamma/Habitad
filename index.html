@@ -1,26 +1,27 @@
-<!DOCTYPE html>
-<html>
-  <head>
-      <link rel="stylesheet" href="index.css">
-      <title> Habitad </title>
-  </head>
-  <body>
-     
-     <div class="main-nav">
-         <div class="navb">
+<body>
+  <!-- Navigation -->
+  <div class="main-nav">
+    <div class="navb">
+      <a href="journal.html" class="link">Journaling</a>
+      <a href="meditation.html" class="link">Meditation</a>
+      <a href="habit.html" class="link">Habit Tracker</a>
+      <a href="micro.html" class="link">Micro-Goals</a>
+    </div>
+  </div>
 
-           
-           <a href="/journal.html" class="link">Journaling</a>
-           
-           <a href="/meditation.html" class="link"> Meditation </a>
-           <a href="/habit.html" class="link"> Habit Tracker </a>
-           <a href="/micro.html" class="link"> Micro-Goals </a>        
-         </div>
-     </div>
-         
-    
-    
-         
-  </body>
-</html>
+  <!-- Hero Section -->
+  <section class="hero">
+    <h1>Habitat</h1>
+    <p>Build habits. Plan goals. Reflect daily.</p>
+    <button onclick="window.location.href='micro.html'">Get Started</button>
+    <button onclick="document.getElementById('features').scrollIntoView()">See How It Works</button>
+  </section>
 
+  <!-- Features Section -->
+  <section id="features">
+    <div class="feature-card">✅ Micro-Goal Planner</div>
+    <div class="feature-card">📅 Habit Tracker</div>
+    <div class="feature-card">📝 Journal & Reflection</div>
+    <div class="feature-card">📊 Progress Insights</div>
+  </section>
+</body>

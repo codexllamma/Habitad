@@ -1,10 +1,20 @@
-<!DOCTYPE html>
-<html>
-  <head>
-   <link rel="stylesheet" href="index.css">
-  </head>
-  <body>
-    <p class="tt">This is the Meditation page</p>
-    <iframe height="360px" width="640px" src="./public/5-Minute Meditation You Can Do Anywhere  Goodful - Goodful (360p, h264).mp4"></iframe>
-  </body>
-</html>
+<body>
+  <p class="tt">Take a 5-minute mindful break</p>
+  <iframe height="360" width="640" src="./public/5-Minute Meditation.mp4"></iframe>
+
+  <div>
+    <p id="timer">Breath Cycle: Ready</p>
+    <button onclick="startBreathing()">Start Breathing Exercise</button>
+  </div>
+
+  <script>
+    function startBreathing() {
+      let phases = ["Breathe In", "Hold", "Breathe Out"];
+      let i = 0;
+      setInterval(() => {
+        document.getElementById("timer").innerText = phases[i % 3];
+        i++;
+      }, 4000);
+    }
+  </script>
+</body>
