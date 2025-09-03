@@ -8,7 +8,7 @@ window.addEventListener('scroll', () => {
     const scrollProgress = Math.min(scrollY / maxScroll, 1);
     
     
-    const rotation = 135 + (scrollProgress * 30);
+    const rotation = 135 + (scrollProgress * 30);+
     const stop1 = Math.max(0, scrollProgress * 30);
     const stop2 = 25 + (scrollProgress * 20);
     const stop3 = 50 + (scrollProgress * 10);
