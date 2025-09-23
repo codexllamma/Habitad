@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Habitad - Your Personal Productivity Hub</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="home-page">
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-brand">Habitad</a>
+            <div class="nav-links">
+                <a href="index.html" class="nav-link active">
+                    <span class="nav-icon">🏠</span>
+                    <span class="nav-text">Home</span>
+                </a>
+                <a href="planner.html" class="nav-link">
+                    <span class="nav-icon">🎯</span>
+                    <span class="nav-text">Planner</span>
+                </a>
+                <a href="habits.html" class="nav-link">
+                    <span class="nav-icon">✅</span>
+                    <span class="nav-text">Habits</span>
+                </a>
+                <a href="meditation.html" class="nav-link">
+                    <span class="nav-icon">🧠</span>
+                    <span class="nav-text">Meditation</span>
+                </a>
+                <a href="journaling.html" class="nav-link">
+                    <span class="nav-icon">📖</span>
+                    <span class="nav-text">Journaling</span>
+                </a>
+                <a href="about.html" class="nav-link">
+                    <span class="nav-icon">ℹ️</span>
+                    <span class="nav-text">About</span>
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="page-content">
+        <div class="background-lights">
+            <div class="light light-1"></div>
+            <div class="light light-2"></div>
+            <div class="light light-3"></div>
+        </div>
+
+        <div class="container">
+            <div class="hero-section">
+                <h1 class="hero-title">
+                    Transform Your
+                    <span class="gradient-text">Productivity</span>
+                </h1>
+                <p class="hero-description">
+                    Unlock your potential with our comprehensive suite of productivity tools. 
+                    Plan your goals, track your habits, meditate mindfully, and journal your journey to success.
+                </p>
+                <button class="cta-button" onclick="showAuthModal()">Start Your Journey</button>
+            </div>
+
+            <div class="features-grid">
+                <div class="feature-card" onclick="window.location.href='planner.html'">
+                    <div class="feature-icon purple-gradient">🎯</div>
+                    <h3 class="feature-title">Micro Goal Planner</h3>
+                    <p class="feature-description">Break down your big dreams into manageable, actionable steps</p>
+                </div>
+                <div class="feature-card" onclick="window.location.href='habits.html'">
+                    <div class="feature-icon green-gradient">✅</div>
+                    <h3 class="feature-title">Habit Tracker</h3>
+                    <p class="feature-description">Build lasting habits with our intuitive tracking system</p>
+                </div>
+                <div class="feature-card" onclick="window.location.href='meditation.html'">
+                    <div class="feature-icon teal-gradient">🧠</div>
+                    <h3 class="feature-title">Meditation Center</h3>
+                    <p class="feature-description">Find your inner peace with guided meditation sessions</p>
+                </div>
+                <div class="feature-card" onclick="window.location.href='journaling.html'">
+                    <div class="feature-icon pink-gradient">📖</div>
+                    <h3 class="feature-title">Daily Journal</h3>
+                    <p class="feature-description">Reflect, grow, and document your journey to success</p>
+                </div>
+            </div>
+
+            <div class="benefits-section">
+                <h2 class="benefits-title">Why Choose Habitad?</h2>
+                <div class="benefits-grid">
+                    <div class="benefit-item">
+                        <div class="benefit-number">1</div>
+                        <h3 class="benefit-title">Integrated Experience</h3>
+                        <p class="benefit-description">All your productivity tools in one seamless platform</p>
+                    </div>
+                    <div class="benefit-item">
+                        <div class="benefit-number">2</div>
+                        <h3 class="benefit-title">Science-Backed Methods</h3>
+                        <p class="benefit-description">Built on proven psychological principles for lasting change</p>
+                    </div>
+                    <div class="benefit-item">
+                        <div class="benefit-number">3</div>
+                        <h3 class="benefit-title">Beautiful Design</h3>
+                        <p class="benefit-description">Elegant interface that makes productivity enjoyable</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="authModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="hideAuthModal()">&times;</span>
+            <h2>Welcome to Habitad</h2>
+            <div class="auth-tabs">
+                <button class="tab-button active" onclick="showTab('login')">Login</button>
+                <button class="tab-button" onclick="showTab('register')">Register</button>
+            </div>
+            <div id="loginTab" class="tab-content active">
+                <form>
+                    <input type="email" placeholder="Enter your email" required>
+                    <input type="password" placeholder="Enter your password" required>
+                    <button type="submit">Sign In</button>
+                </form>
+            </div>
+            <div id="registerTab" class="tab-content">
+                <form>
+                    <input type="text" placeholder="Enter your full name" required>
+                    <input type="email" placeholder="Enter your email" required>
+                    <input type="password" placeholder="Create a password" required>
+                    <button type="submit">Create Account</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

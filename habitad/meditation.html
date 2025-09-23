@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meditation Center - Habitad</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="meditation-page">
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-brand">Habitad</a>
+            <div class="nav-links">
+                <a href="index.html" class="nav-link">
+                    <span class="nav-icon">🏠</span>
+                    <span class="nav-text">Home</span>
+                </a>
+                <a href="planner.html" class="nav-link">
+                    <span class="nav-icon">🎯</span>
+                    <span class="nav-text">Planner</span>
+                </a>
+                <a href="habits.html" class="nav-link">
+                    <span class="nav-icon">✅</span>
+                    <span class="nav-text">Habits</span>
+                </a>
+                <a href="meditation.html" class="nav-link active">
+                    <span class="nav-icon">🧠</span>
+                    <span class="nav-text">Meditation</span>
+                </a>
+                <a href="journaling.html" class="nav-link">
+                    <span class="nav-icon">📖</span>
+                    <span class="nav-text">Journaling</span>
+                </a>
+                <a href="about.html" class="nav-link">
+                    <span class="nav-icon">ℹ️</span>
+                    <span class="nav-text">About</span>
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="page-content">
+        <div class="container">
+            <div class="page-header">
+                <div class="page-title">
+                    <span class="page-icon"></span>
+                    <h1>Meditation Center</h1>
+                </div>
+                <p class="page-description">
+                    Find inner peace and clarity through guided meditation. Choose your practice and duration.
+                </p>
+            </div>
+
+            <div class="meditation-grid">
+                <div class="timer-card">
+                    <h3>🕐 Meditation Timer</h3>
+                    <div class="timer-section">
+                        <label>Select Duration</label>
+                        <select id="durationSelect" onchange="setDuration()">
+                            <option value="">Choose meditation time</option>
+                            <option value="5">5 minutes</option>
+                            <option value="10">10 minutes</option>
+                            <option value="15">15 minutes</option>
+                            <option value="20">20 minutes</option>
+                            <option value="30">30 minutes</option>
+                        </select>
+                    </div>
+
+                    <div id="timerDisplay" class="timer-display" style="display: none;">
+                        <div class="timer-circle">
+                            <div class="timer-text">
+                                <div class="timer-time" id="timerTime">5:00</div>
+                                <div class="timer-label">minutes</div>
+                            </div>
+                        </div>
+                        <div class="timer-controls">
+                            <button id="playPauseBtn" class="control-button" onclick="toggleTimer()">▶️ Start</button>
+                            <button class="control-button" onclick="resetTimer()">🔄 Reset</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="practices-card">
+                    <h3>Meditation Practices</h3>
+                    <div class="practice-item">
+                        <h4>Mindfulness Meditation</h4>
+                        <p>Focus on the present moment and observe your thoughts without judgment.</p>
+                        <div class="practice-tags">
+                            <span class="tag duration">5-30 min</span>
+                            <span class="tag difficulty">Beginner</span>
+                        </div>
+                    </div>
+                    <div class="practice-item">
+                        <h4>Breathing Exercise</h4>
+                        <p>Deep breathing techniques to calm your mind and reduce stress.</p>
+                        <div class="practice-tags">
+                            <span class="tag duration">3-15 min</span>
+                            <span class="tag difficulty">Beginner</span>
+                        </div>
+                    </div>
+                    <div class="practice-item">
+                        <h4>Body Scan</h4>
+                        <p>Progressive relaxation focusing on different parts of your body.</p>
+                        <div class="practice-tags">
+                            <span class="tag duration">10-30 min</span>
+                            <span class="tag difficulty">Intermediate</span>
+                        </div>
+                    </div>
+                    <div class="practice-item">
+                        <h4>Loving Kindness</h4>
+                        <p>Cultivate compassion and positive feelings towards yourself and others.</p>
+                        <div class="practice-tags">
+                            <span class="tag duration">10-20 min</span>
+                            <span class="tag difficulty">Intermediate</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="quote-card">
+                <div class="quote-icon">🧠</div>
+                <p class="quote-text">"Meditation is not evasion; it is a serene encounter with reality."</p>
+                <p class="quote-author">— Thich Nhat Hanh</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

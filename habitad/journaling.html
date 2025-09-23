@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daily Journal - Habitad</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="journaling-page">
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-brand">Habitad</a>
+            <div class="nav-links">
+                <a href="index.html" class="nav-link">
+                    <span class="nav-icon">🏠</span>
+                    <span class="nav-text">Home</span>
+                </a>
+                <a href="planner.html" class="nav-link">
+                    <span class="nav-icon">🎯</span>
+                    <span class="nav-text">Planner</span>
+                </a>
+                <a href="habits.html" class="nav-link">
+                    <span class="nav-icon">✅</span>
+                    <span class="nav-text">Habits</span>
+                </a>
+                <a href="meditation.html" class="nav-link">
+                    <span class="nav-icon">🧠</span>
+                    <span class="nav-text">Meditation</span>
+                </a>
+                <a href="journaling.html" class="nav-link active">
+                    <span class="nav-icon">📖</span>
+                    <span class="nav-text">Journaling</span>
+                </a>
+                <a href="about.html" class="nav-link">
+                    <span class="nav-icon">ℹ️</span>
+                    <span class="nav-text">About</span>
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="page-content">
+        <div class="container">
+            <div class="page-header">
+                <div class="page-title">
+                    <span class="page-icon"></span>
+                    <h1>Daily Journal</h1>
+                </div>
+                <p class="page-description">
+                    Reflect on your day, capture your thoughts, and document your journey of growth and self-discovery.
+                </p>
+            </div>
+
+            <div class="journaling-grid">
+                <div class="journal-main">
+                    <div class="journal-header">
+                        <h3>📅 Today's Entry</h3>
+                        <div class="journal-date" id="journalDate"></div>
+                    </div>
+                    <textarea 
+                        id="journalTextarea"
+                        class="journal-textarea"
+                        placeholder="You have had a long day. Let it all out. Reflect a little. It can be a plain raw journal, or feel free to select a template to help you get started."
+                    ></textarea>
+                    <div class="journal-footer">
+                        <div class="character-count" id="characterCount">0 characters</div>
+                        <button class="save-button" onclick="saveJournalEntry()">💾 Save Entry</button>
+                    </div>
+                </div>
+
+                <div class="journal-sidebar">
+                    <div class="prompts-card">
+                        <h3>❤️ Writing Prompts</h3>
+                        <div id="promptsList">
+                            <!-- Prompts will be populated by JavaScript -->
+                        </div>
+                    </div>
+
+                    <div class="recent-entries-card">
+                        <h3>Recent Entries</h3>
+                        <div id="recentEntries">
+                            <p class="no-entries">No entries yet. Start writing!</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="quote-card">
+                <div class="quote-icon">📖</div>
+                <p class="quote-text">"Writing is the painting of the voice."</p>
+                <p class="quote-author">— Voltaire</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

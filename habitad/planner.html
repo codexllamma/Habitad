@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Micro Goal Planner - Habitad</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="planner-page">
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-brand">Habitad</a>
+            <div class="nav-links">
+                <a href="index.html" class="nav-link">
+                    <span class="nav-icon">🏠</span>
+                    <span class="nav-text">Home</span>
+                </a>
+                <a href="planner.html" class="nav-link active">
+                    <span class="nav-icon">🎯</span>
+                    <span class="nav-text">Planner</span>
+                </a>
+                <a href="habits.html" class="nav-link">
+                    <span class="nav-icon">✅</span>
+                    <span class="nav-text">Habits</span>
+                </a>
+                <a href="meditation.html" class="nav-link">
+                    <span class="nav-icon">🧠</span>
+                    <span class="nav-text">Meditation</span>
+                </a>
+                <a href="journaling.html" class="nav-link">
+                    <span class="nav-icon">📖</span>
+                    <span class="nav-text">Journaling</span>
+                </a>
+                <a href="about.html" class="nav-link">
+                    <span class="nav-icon">ℹ️</span>
+                    <span class="nav-text">About</span>
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="page-content">
+        <div class="container">
+            <div class="page-header">
+                <div class="page-title">
+                    <span class="page-icon"></span>
+                    <h1>Micro Goal Planner</h1>
+                </div>
+                <p class="page-description">
+                    Transform your big dreams into actionable steps. Break down your goals and create a clear path to success.
+                </p>
+            </div>
+
+            <div class="planner-container">
+                <div class="planner-header">
+                    <h2>Your Goals & Action Plans</h2>
+                    <button class="save-button" onclick="saveGoals()">💾 Save Progress</button>
+                </div>
+                
+                <textarea 
+                    id="goalsTextarea"
+                    class="goals-textarea"
+                    placeholder="Got a goal to plan in mind. Enter a simple prompt and watch your goal be broken down into micro-goals that you can take action on starting now."
+                ></textarea>
+                
+                <div class="planner-tip">
+                    💡 Tip: Break large goals into weekly or daily micro-goals for better success rates
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
